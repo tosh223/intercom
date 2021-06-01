@@ -1,4 +1,23 @@
 [[package]]
+name = "awscrt"
+version = "0.11.20"
+description = "A common runtime for AWS Python projects"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "awsiotsdk"
+version = "1.5.17"
+description = "AWS IoT SDK based on the AWS Common Runtime"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+awscrt = "0.11.20"
+
+[[package]]
 name = "numpy"
 version = "1.20.3"
 description = "NumPy is the fundamental package for array computing with Python."
@@ -25,9 +44,46 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "b43bbabd37e2b1f18f3a8ac071fa902b2cedb1a225e7cdbe4082c544d7270836"
+content-hash = "9389b92bd225f16feee050c71364cfa8167073130352cd04c492e0ebf365b590"
 
 [metadata.files]
+awscrt = [
+    {file = "awscrt-0.11.20-cp35-cp35m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:9a9921ac0b9e8737d1298ea214f86dd7c9c3111b68f2a4c67773c767f427728f"},
+    {file = "awscrt-0.11.20-cp35-cp35m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:8289937ff66cbd03d38fbb58044aa496ec50dd9b08be75f511c425e042545f90"},
+    {file = "awscrt-0.11.20-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:e24cb61b19031cba9d185967174f8b92441500fb5de4ad6742338d12ab4d86f4"},
+    {file = "awscrt-0.11.20-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b1e72d40de3e2e11bc03d1a1882be8bf00f85efc8e8f1dd1f3dcb698363a04b5"},
+    {file = "awscrt-0.11.20-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5e16c3acf045e10a9b3430f4c59039ae81046ad3e6c2b784246ccd7a6c797948"},
+    {file = "awscrt-0.11.20-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:2b06545f9ca5cb65b58b30cd18930d6b2594c16836be1636fdf967869f5fdd58"},
+    {file = "awscrt-0.11.20-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ee8ae1e0e40ee4f4338dc9d550dbeb3cdde96530a39cf530172c4317c6f846ce"},
+    {file = "awscrt-0.11.20-cp36-cp36m-win32.whl", hash = "sha256:4e99ce8601c93940e241515a862a710a79bdcae2616419d21f39638108e82e8f"},
+    {file = "awscrt-0.11.20-cp36-cp36m-win_amd64.whl", hash = "sha256:e0b232862cede05c41d811ca07cb73e83509de476bea3be7d6fc4a86964f5723"},
+    {file = "awscrt-0.11.20-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:5718762d4d70c40bcd82c3ebb4cf1fcf07971f11e9f231c38db2dc74c8cbcac3"},
+    {file = "awscrt-0.11.20-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6794e119db8bac03339dd2090a8d62d192a7c24abba69035ea17c9462dc8d630"},
+    {file = "awscrt-0.11.20-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:73ebb726c90e0e8e77d29645038b43545d47b8b2cdc7608e8ca2527e4ae565c2"},
+    {file = "awscrt-0.11.20-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:c50bf7f7b0606db147c0d5af73df64a02c7a86798f779602e6280f0d31569201"},
+    {file = "awscrt-0.11.20-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:c3e48ff81d730e782f96b29515cece83276a4cd6c21ed89b2ffdfc70897a3630"},
+    {file = "awscrt-0.11.20-cp37-cp37m-win32.whl", hash = "sha256:c52ed3a672975512ebba1db5d8df0ffbbb030c89e09eb03c9c96efbc63d10e82"},
+    {file = "awscrt-0.11.20-cp37-cp37m-win_amd64.whl", hash = "sha256:797c8548638418ff8f8b538ab2fe3f7de529cddeb0ce81e426b9f576f3916116"},
+    {file = "awscrt-0.11.20-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:acd798b9bbc61d65377a9d32cc3e86a26e4b300af4f54010ce8e7ee65fb5950b"},
+    {file = "awscrt-0.11.20-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ff079c97197cfde38e5ff38b003c82ea466e4edec278501293e003351e13472b"},
+    {file = "awscrt-0.11.20-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c4962aa024724b2c72daaf57327fdcef4445ee2c1b0108259aeec7ad56562bb3"},
+    {file = "awscrt-0.11.20-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:4d46d69e3fc41360695d6c6d368a71e8297dbf1d2b324e5929b771e309fa8800"},
+    {file = "awscrt-0.11.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:8ecfe8f9ef73561885f0279ebd4e6bbbca151d6a2c4492dd8dcc95a9909ba82c"},
+    {file = "awscrt-0.11.20-cp38-cp38-win32.whl", hash = "sha256:e74bbe4e62602c4e92020fc201f141151cae2eaf2c2c48eea2bfca03748b547f"},
+    {file = "awscrt-0.11.20-cp38-cp38-win_amd64.whl", hash = "sha256:db2a89902d6d344d983b925d11be6e72d8162ae91c6051523ffa4dbed747f25b"},
+    {file = "awscrt-0.11.20-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:089696c67989865b88ff4288688b1d7e07dba0a5ba744fb0a6d95dae53c4266c"},
+    {file = "awscrt-0.11.20-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4afdfc6651e1d4ca5272ff08e7298a3b4140f230a6139d2163363a7e1db80bd4"},
+    {file = "awscrt-0.11.20-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8f219ec55218f94ac3f1cb6128a43aea9dcf0222feae35831139fe1be1b50143"},
+    {file = "awscrt-0.11.20-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:0f8ba7484f45a27bac74cc0877f25d8703d65361e37bb72566195c2e33687324"},
+    {file = "awscrt-0.11.20-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:9aedcb3207e07100128279196ae4f2c9f82561eb3f421f24249b34327455a301"},
+    {file = "awscrt-0.11.20-cp39-cp39-win32.whl", hash = "sha256:9426ecbd100a50919298896e4085571d6f9ae52d9b445f6c32ee4b4019e6dbd1"},
+    {file = "awscrt-0.11.20-cp39-cp39-win_amd64.whl", hash = "sha256:170b5bf29a50be745c56421783e45e0cc5acc6362c11626a70cd31327315e844"},
+    {file = "awscrt-0.11.20.tar.gz", hash = "sha256:b08275eabca367380aa6d2bf9edd6d54658bb3c73b272cb4a6c629925c0b51a1"},
+]
+awsiotsdk = [
+    {file = "awsiotsdk-1.5.17-py3-none-any.whl", hash = "sha256:2336e1efcc3d87659b8c76b792a92510a1f2f06dacc173b9865b115cc87056fa"},
+    {file = "awsiotsdk-1.5.17.tar.gz", hash = "sha256:401a69b206f4e0429c270a72a0ae8f8aafd2860b43ea3865856cdbfb7f3af9a1"},
+]
 numpy = [
     {file = "numpy-1.20.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:70eb5808127284c4e5c9e836208e09d685a7978b6a216db85960b1a112eeace8"},
     {file = "numpy-1.20.3-cp37-cp37m-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:6ca2b85a5997dabc38301a22ee43c82adcb53ff660b89ee88dded6b33687e1d8"},
